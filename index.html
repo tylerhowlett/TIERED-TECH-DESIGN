@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tiered Tech</title>
   <style>
+    /* Body Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -12,8 +13,9 @@
       background: #f4f4f4;
     }
 
+    /* Header Styles */
     header {
-      background-color: #333;
+      background-color: #333; /* Dark background for the header */
       padding: 1rem;
       position: sticky;
       top: 0;
@@ -21,9 +23,10 @@
     }
 
     header .logo a {
-      color: white;
+      color: #ff9900; /* Logo color */
       text-decoration: none;
       font-size: 2rem;
+      font-weight: bold;
     }
 
     header nav ul {
@@ -43,14 +46,21 @@
       font-size: 1.2rem;
     }
 
+    header nav ul li a:hover {
+      color: #ff9900; /* Hover effect color */
+    }
+
+    /* Section Styles */
     .section {
       padding: 2rem 0;
     }
 
     .section h1 {
       text-align: center;
+      color: #333; /* Dark text for headings */
     }
 
+    /* Tier and Build Galleries */
     .build-gallery,
     .tier-gallery {
       display: flex;
@@ -75,17 +85,7 @@
       border-radius: 5px;
     }
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #333;
-      color: white;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
+    /* Contact Form */
     form {
       display: flex;
       flex-direction: column;
@@ -95,6 +95,7 @@
 
     form label {
       margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
 
     form input,
@@ -118,9 +119,21 @@
       background-color: #555;
     }
 
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
     /* Styling for sticky navbar */
     header nav ul li a:hover {
-      color: #ff9900;
+      color: #ff9900; /* Highlight hover color */
     }
 
     /* Scroll Effect for Page Sections */
