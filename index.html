@@ -1,258 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiered Tech</title>
   <style>
-    /* Body Styles */
+    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 2rem;
-      background: #f4f4f4;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
-
-    /* Header Styles */
+    h1, h2, h3 {
+      color: #0056b3; /* Blue color for headings */
+      text-align: center;
+    }
     header {
-      background-color: #333; /* Dark background for the header */
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background-color: #0056b3; /* Blue color for the header */
+      padding: 20px 0;
+      text-align: center;
+    }
+    header img {
+      width: 150px; /* Adjust logo size */
     }
 
-    header .logo a {
-      color: #ff9900; /* Logo color */
+    /* Navigation Styling */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      margin-top: 20px;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
       text-decoration: none;
-      font-size: 2rem;
+      color: #fff;
       font-weight: bold;
     }
-
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    header nav ul li {
-      margin: 0 1rem;
-    }
-
-    header nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-
-    header nav ul li a:hover {
-      color: #ff9900; /* Hover effect color */
+    nav ul li a:hover {
+      text-decoration: underline;
     }
 
     /* Section Styles */
-    .section {
-      padding: 2rem 0;
+    section {
+      padding: 40px 20px;
     }
 
-    .section h1 {
-      text-align: center;
-      color: #333; /* Dark text for headings */
-    }
-
-    /* Tier and Build Galleries */
-    .build-gallery,
-    .tier-gallery {
+    /* Build Tiers Section */
+    .tier {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 30px;
+      margin-top: 20px;
     }
-
-    .build-item,
-    .tier-item {
-      background: white;
+    .tier .tier-option {
+      background: #fff;
+      border: 2px solid #0056b3;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      max-width: 300px;
+      padding: 20px;
+      width: 200px;
       text-align: center;
     }
-
-    .build-item img,
-    .tier-item img {
-      width: 100%;
-      border-radius: 5px;
+    .tier .tier-option h3 {
+      color: #0056b3;
+    }
+    .tier .tier-option p {
+      color: #333;
     }
 
-    /* Contact Form */
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    form label {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    form input,
-    form textarea {
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    form button {
-      padding: 0.75rem;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #555;
-    }
-
-    /* Footer */
+    /* Footer Styling */
     footer {
+      background-color: #0056b3;
+      color: #fff;
       text-align: center;
-      padding: 1rem;
-      background-color: #333;
-      color: white;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    /* Styling for sticky navbar */
-    header nav ul li a:hover {
-      color: #ff9900; /* Highlight hover color */
-    }
-
-    /* Scroll Effect for Page Sections */
-    .section {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .section.visible {
-      opacity: 1;
-    }
-
-    /* Styling for animated page transitions */
-    body {
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      padding: 10px 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo"><a href="#">Tiered Tech</a></div>
+    <img src="https://yourdomain.com/tiered-tech-logo.png" alt="Tiered Tech Logo">
+    <h1>Welcome to Tiered Tech</h1>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#tiers">Tiers</a></li>
-        <li><a href="#builds">Builds</a></li>
+        <li><a href="#builds">Past Builds</a></li>
+        <li><a href="#tiers">Build Tiers</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <h1>Welcome to Tiered Tech!</h1>
-    <p>We specialize in custom computer builds tailored to your needs. Whether you're a gamer, streamer, or need a powerful workstation, we’ve got you covered!</p>
+  <section id="home">
+    <h2>Welcome to Tiered Tech</h2>
+    <p>At Tiered Tech, we build custom PCs designed to meet your needs, whether you're gaming, working, or creating. Explore our builds and pick the right tier for you!</p>
   </section>
 
-  <!-- Tiers Section -->
-  <section id="tiers" class="section">
-    <h1>Choose Your Build Tier</h1>
-    <div class="tier-gallery">
-      <div class="tier-item">
-        <h3>Entry Level</h3>
-        <p>Perfect for basic tasks and casual gaming.</p>
-      </div>
-      <div class="tier-item">
-        <h3>Mid-Range</h3>
-        <p>Great for gaming and workstations.</p>
-      </div>
-      <div class="tier-item">
-        <h3>High-End</h3>
-        <p>Top-tier performance for gaming and heavy workloads.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Past Builds Section -->
-  <section id="builds" class="section">
-    <h1>Past Builds</h1>
+  <section id="builds">
+    <h2>Past Builds</h2>
     <div class="build-gallery">
       <div class="build-item">
-        <img src="https://via.placeholder.com/300" alt="Build 1" />
+        <img src="https://yourdomain.com/build1.jpg" alt="Build 1">
         <p>High-performance Gaming Build</p>
       </div>
       <div class="build-item">
-        <img src="https://via.placeholder.com/300" alt="Build 2" />
+        <img src="https://yourdomain.com/build2.jpg" alt="Build 2">
         <p>Budget-friendly Workstation</p>
       </div>
       <div class="build-item">
-        <img src="https://via.placeholder.com/300" alt="Build 3" />
+        <img src="https://yourdomain.com/build3.jpg" alt="Build 3">
         <p>RGB Enthusiast Build</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h1>Contact Us</h1>
-    <form action="submit_form.php" method="post">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
+  <section id="tiers">
+    <h2>Build Tiers</h2>
+    <div class="tier">
+      <div class="tier-option">
+        <h3>Basic</h3>
+        <p>Perfect for everyday tasks and light gaming.</p>
+      </div>
+      <div class="tier-option">
+        <h3>Mid</h3>
+        <p>Powerful performance for work, gaming, and multimedia.</p>
+      </div>
+      <div class="tier-option">
+        <h3>Premium</h3>
+        <p>Top-tier performance for professionals and gamers alike.</p>
+      </div>
+    </div>
+  </section>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send Message</button>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to request a build, feel free to get in touch with us!</p>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" required></textarea><br><br>
+      <input type="submit" value="Send">
     </form>
   </section>
 
   <footer>
     <p>&copy; 2025 Tiered Tech. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Scroll Effect for Sections
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        if (section.getBoundingClientRect().top <= window.innerHeight / 1.5) {
-          section.classList.add('visible');
-        }
-      });
-    });
-
-    // Automatically Scroll After 5 seconds
-    setTimeout(() => {
-      window.scrollTo({
-        top: document.getElementById('tiers').offsetTop,
-        behavior: 'smooth',
-      });
-    }, 5000);
-  </script>
 </body>
 </html>
