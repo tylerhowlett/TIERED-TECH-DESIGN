@@ -117,6 +117,31 @@
     form button:hover {
       background-color: #555;
     }
+
+    /* Styling for sticky navbar */
+    header nav ul li a:hover {
+      color: #ff9900;
+    }
+
+    /* Scroll Effect for Page Sections */
+    .section {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+    }
+
+    /* Styling for animated page transitions */
+    body {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -162,15 +187,15 @@
     <h1>Past Builds</h1>
     <div class="build-gallery">
       <div class="build-item">
-        <img src="build1.jpg" alt="Build 1" />
+        <img src="https://via.placeholder.com/300" alt="Build 1" />
         <p>High-performance Gaming Build</p>
       </div>
       <div class="build-item">
-        <img src="build2.jpg" alt="Build 2" />
+        <img src="https://via.placeholder.com/300" alt="Build 2" />
         <p>Budget-friendly Workstation</p>
       </div>
       <div class="build-item">
-        <img src="build3.jpg" alt="Build 3" />
+        <img src="https://via.placeholder.com/300" alt="Build 3" />
         <p>RGB Enthusiast Build</p>
       </div>
     </div>
@@ -196,5 +221,25 @@
   <footer>
     <p>&copy; 2025 Tiered Tech. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Scroll Effect for Sections
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top <= window.innerHeight / 1.5) {
+          section.classList.add('visible');
+        }
+      });
+    });
+
+    // Automatically Scroll After 5 seconds
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.getElementById('tiers').offsetTop,
+        behavior: 'smooth',
+      });
+    }, 5000);
+  </script>
 </body>
 </html>
