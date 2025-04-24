@@ -3,30 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Tiered Tech</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Tiered Tech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav ul li {
+      margin: 0 1rem;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 2rem 0;
+    }
+
+    .section h1 {
+      text-align: center;
+    }
+
+    .build-gallery,
+    .tier-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .build-item,
+    .tier-item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .build-item img,
+    .tier-item img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    form label {
+      margin-bottom: 0.5rem;
+    }
+
+    form input,
+    form textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 0.75rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">Tiered Tech</a></div>
+    <div class="logo"><a href="#">Tiered Tech</a></div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tiers.html">Tiers</a></li>
-        <li><a href="builds.html">Builds</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tiers">Tiers</a></li>
+        <li><a href="#builds">Builds</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <!-- Home Section -->
+  <section id="home" class="section">
     <h1>Welcome to Tiered Tech!</h1>
     <p>We specialize in custom computer builds tailored to your needs. Whether you're a gamer, streamer, or need a powerful workstation, we’ve got you covered!</p>
-  </main>
+  </section>
+
+  <!-- Tiers Section -->
+  <section id="tiers" class="section">
+    <h1>Choose Your Build Tier</h1>
+    <div class="tier-gallery">
+      <div class="tier-item">
+        <h3>Entry Level</h3>
+        <p>Perfect for basic tasks and casual gaming.</p>
+      </div>
+      <div class="tier-item">
+        <h3>Mid-Range</h3>
+        <p>Great for gaming and workstations.</p>
+      </div>
+      <div class="tier-item">
+        <h3>High-End</h3>
+        <p>Top-tier performance for gaming and heavy workloads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Builds Section -->
+  <section id="builds" class="section">
+    <h1>Past Builds</h1>
+    <div class="build-gallery">
+      <div class="build-item">
+        <img src="build1.jpg" alt="Build 1" />
+        <p>High-performance Gaming Build</p>
+      </div>
+      <div class="build-item">
+        <img src="build2.jpg" alt="Build 2" />
+        <p>Budget-friendly Workstation</p>
+      </div>
+      <div class="build-item">
+        <img src="build3.jpg" alt="Build 3" />
+        <p>RGB Enthusiast Build</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h1>Contact Us</h1>
+    <form action="submit_form.php" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2025 Tiered Tech. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
