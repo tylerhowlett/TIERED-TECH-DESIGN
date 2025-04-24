@@ -1,22 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
-  <title>Tiered Tech | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiered Tech | Custom PC Builds</title>
+  <meta name="description" content="Tiered Tech specializes in custom PC builds. Explore budget to high-end options, view past builds, and start your personalized performance machine today.">
+  <meta name="keywords" content="custom PC builds, gaming PCs, high-end computers, budget PCs, PC building services, Tiered Tech">
+  <meta name="author" content="Tiered Tech">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Tiered Tech | Custom PC Builds">
+  <meta property="og:description" content="Tiered Tech specializes in custom PC builds. Explore budget to high-end options, view past builds, and start your personalized performance machine today.">
+  <meta property="og:image" content="https://yourdomain.com/WEBSITE/logo.png">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: #111;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    header img {
+      height: 80px;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+    }
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 1rem;
+      text-align: center;
+    }
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .carousel-caption {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #333;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .carousel-btn.left {
+      left: 10px;
+    }
+    .carousel-btn.right {
+      right: 10px;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+  </style>
 </head>
 <body>
-  <header>Tiered Tech</header>
-  <nav>
-    <a href="builds.html">Past Builds</a>
-    <a href="tiers.html">Build Tiers</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
-  <main>
-    <h1>Welcome to Tiered Tech</h1>
-    <p>Custom performance PCs built to your needs.</p>
-  </main>
+  <header>
+    <img src="https://yourdomain.com/WEBSITE/logo.png" alt="Tiered Tech Logo">
+    <nav>
+      <a href="/index.html" target="_blank">Home</a>
+      <a href="/tiers.html" target="_blank">Build Tiers</a>
+      <a href="/builds.html" target="_blank">Past Builds</a>
+      <a href="/contact.html" target="_blank">Contact</a>
+    </nav>
+  </header>
+
+  <section class="past-builds" id="past-builds">
+    <h2>Past Builds</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn left" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <img src="https://yourdomain.com/build1.jpg" alt="Build 1">
+          <div class="carousel-caption">High-performance Gaming Build</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://yourdomain.com/build2.jpg" alt="Build 2">
+          <div class="carousel-caption">Budget-friendly Workstation</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://yourdomain.com/build3.jpg" alt="Build 3">
+          <div class="carousel-caption">RGB Enthusiast Build</div>
+        </div>
+      </div>
+      <button class="carousel-btn right" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tiered Tech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const track = document.getElementById('carouselTrack');
+    const totalSlides = track.children.length;
+
+    function moveSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = totalSlides - 1;
+      if (currentSlide >= totalSlides) currentSlide = 0;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    setInterval(() => {
+      moveSlide(1);
+    }, 5000);
+  </script>
 </body>
 </html>
