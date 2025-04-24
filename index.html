@@ -12,6 +12,11 @@
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
     h1, h2, h3 {
       color: #003366; /* Dark Blue color for headings */
@@ -21,6 +26,7 @@
       background-color: #003366; /* Dark Blue color for the header */
       padding: 20px 0;
       text-align: center;
+      width: 100%;
     }
     header img {
       width: 150px; /* Adjust logo size */
@@ -49,6 +55,7 @@
     /* Section Styles */
     section {
       padding: 40px 20px;
+      text-align: center;
     }
 
     /* Build Tiers Section */
@@ -79,6 +86,7 @@
       color: #ffffff;
       text-align: center;
       padding: 10px 0;
+      width: 100%;
     }
   </style>
 </head>
@@ -103,17 +111,17 @@
 
   <section id="builds">
     <h2>Past Builds</h2>
-    <div class="build-gallery">
-      <div class="build-item">
-        <img src="https://yourdomain.com/build1.jpg" alt="Build 1">
+    <div class="build-gallery" style="display: flex; justify-content: center; gap: 20px;">
+      <div class="build-item" style="text-align: center;">
+        <img src="https://yourdomain.com/build1.jpg" alt="Build 1" style="width: 100%; max-width: 300px;">
         <p>High-performance Gaming Build</p>
       </div>
-      <div class="build-item">
-        <img src="https://yourdomain.com/build2.jpg" alt="Build 2">
+      <div class="build-item" style="text-align: center;">
+        <img src="https://yourdomain.com/build2.jpg" alt="Build 2" style="width: 100%; max-width: 300px;">
         <p>Budget-friendly Workstation</p>
       </div>
-      <div class="build-item">
-        <img src="https://yourdomain.com/build3.jpg" alt="Build 3">
+      <div class="build-item" style="text-align: center;">
+        <img src="https://yourdomain.com/build3.jpg" alt="Build 3" style="width: 100%; max-width: 300px;">
         <p>RGB Enthusiast Build</p>
       </div>
     </div>
