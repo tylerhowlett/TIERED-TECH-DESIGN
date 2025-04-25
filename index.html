@@ -5,39 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiered Tech</title>
   <style>
-    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
     }
     h1, h2, h3 {
-      color: #003366; /* Dark Blue color for headings */
+      color: #003366;
       text-align: center;
     }
     header {
-      background-color: #003366; /* Dark Blue color for the header */
-      padding: 20px 0;
+      background-color: #003366;
       text-align: center;
+    }
+    header img.banner {
       width: 100%;
+      display: block;
     }
-    header img {
-      width: 150px; /* Adjust logo size */
-    }
-
-    /* Navigation Styling */
     nav ul {
       list-style-type: none;
       padding: 0;
-      text-align: center;
-      margin-top: 20px;
+      margin: 20px 0;
     }
     nav ul li {
       display: inline;
@@ -45,55 +35,44 @@
     }
     nav ul li a {
       text-decoration: none;
-      color: #ffffff; /* White for links */
+      color: #ffffff;
       font-weight: bold;
     }
     nav ul li a:hover {
       text-decoration: underline;
     }
-
-    /* Section Styles */
     section {
       padding: 40px 20px;
       text-align: center;
     }
-
-    /* Build Tiers Section */
     .tier {
       display: flex;
       justify-content: center;
       gap: 30px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
     .tier .tier-option {
-      background: #ffffff; /* White background for options */
-      border: 2px solid #003366; /* Dark Blue border for each tier */
+      background: #ffffff;
+      border: 2px solid #003366;
       border-radius: 8px;
       padding: 20px;
       width: 200px;
-      text-align: center;
     }
     .tier .tier-option h3 {
-      color: #003366; /* Dark Blue for tier headings */
+      color: #003366;
     }
-    .tier .tier-option p {
-      color: #333;
-    }
-
-    /* Footer Styling */
     footer {
-      background-color: #003366; /* Dark Blue for footer */
+      background-color: #003366;
       color: #ffffff;
       text-align: center;
       padding: 10px 0;
-      width: 100%;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://github.com/tylerhowlett/TIERED-TECH-DESIGN/blob/main/logo.png.png?raw=true alt="Tiered Tech Logo">
-    <h1>Welcome to Tiered Tech</h1>
+    <img src="https://github.com/tylerhowlett/TIERED-TECH-DESIGN/raw/main/tiered-tech-banner.png" alt="Tiered Tech Banner" class="banner">
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -111,16 +90,16 @@
 
   <section id="builds">
     <h2>Past Builds</h2>
-    <div class="build-gallery" style="display: flex; justify-content: center; gap: 20px;">
-      <div class="build-item" style="text-align: center;">
+    <div class="build-gallery" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <div class="build-item">
         <img src="https://yourdomain.com/build1.jpg" alt="Build 1" style="width: 100%; max-width: 300px;">
         <p>High-performance Gaming Build</p>
       </div>
-      <div class="build-item" style="text-align: center;">
+      <div class="build-item">
         <img src="https://yourdomain.com/build2.jpg" alt="Build 2" style="width: 100%; max-width: 300px;">
         <p>Budget-friendly Workstation</p>
       </div>
-      <div class="build-item" style="text-align: center;">
+      <div class="build-item">
         <img src="https://yourdomain.com/build3.jpg" alt="Build 3" style="width: 100%; max-width: 300px;">
         <p>RGB Enthusiast Build</p>
       </div>
